@@ -4,9 +4,13 @@ import streamlit as st
 import json
 from fpdf import FPDF
 import google.generativeai as genai
+from dotenv import load_dotenv
 
+load_dotenv()
+
+GOOGLE_API_KEY = st.secrets['secret_key']
 # Configure generative AI
-genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
+genai.configure(api_key=os.GOOGLE_API_KEY)
 
 class QuestionGenerator:
     # Original QuestionGenerator class remains exactly the same
