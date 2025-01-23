@@ -4,10 +4,15 @@ import json
 from fpdf import FPDF
 import google.generativeai as genai
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+GOOGLE_API_KEY = st.secrets['secret_key']
 
 class QuestionGenerator:
     def __init__(self):
-        api_key = os.getenv('GOOGLE_API_KEY')
+        api_key = GOOGLE_API_KEY
         if not api_key:
             raise ValueError("Google API Key not found. Please set the GOOGLE_API_KEY environment variable.")
         genai.configure(api_key=api_key)
