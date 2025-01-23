@@ -4,8 +4,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+GOOGLE_API_KEY =st.secrets['secret_key']
+
 def check_api_key():
-    api_key = os.getenv('GOOGLE_API_KEY')
+    api_key = GOOGLE_API_KEY
     if not api_key:
         st.error("❌ Google API Key not found. Please set the GOOGLE_API_KEY environment variable.")
         st.info("💡 You can set it by adding GOOGLE_API_KEY=your_api_key to your .env file.")
