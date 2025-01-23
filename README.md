@@ -74,7 +74,3 @@ Contributions are welcome! If you have suggestions for improvement or encounter 
 Developed with ❤ by [Shlok Gaikwad](https://github.com/shlok025/)
 
 ⚡ Features: Question Generation, Assessment, and Instant Feedback
-
-To use this, you can copy and paste the above content into a new .md file and save it as README.md.
-
-Let me know if you need any further modifications!
