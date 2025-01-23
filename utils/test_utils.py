@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+GOOGLE_API_KEY = st.secrets['secret_key']
+
 def load_questions():
     try:
         with open('generated_questions.json', 'r') as f:
@@ -16,7 +18,7 @@ def load_questions():
         return None
 
 def compare_answers(question, correct_answer, user_answer):
-    api_key = os.getenv('GOOGLE_API_KEY')
+    api_key = GOOGLE_API_KEY
     if not api_key:
         raise ValueError("Google API Key not found. Please set the GOOGLE_API_KEY environment variable.")
     genai.configure(api_key=api_key)
