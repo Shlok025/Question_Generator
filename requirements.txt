@@ -1,0 +1,11 @@
+streamlit
+python-dotenv
+pdfplumber
+fpdf
+langchain
+langchain-google-genai
+langchain-core
+langchain-community
+langchain_ollama
+PyPDF2
+Pillow
